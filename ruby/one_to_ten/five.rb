@@ -23,7 +23,7 @@ end
 puts num
 
 =begin
-this one is my favorite but i don't understand how it works
+this is is my favorite solution. too bad i didn't think of it.
 
 require 'rational'
 num = (1..20).inject(1) { |result, n| result.lcm n }
