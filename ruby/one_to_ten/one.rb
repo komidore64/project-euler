@@ -9,10 +9,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 total_sum = 0
 
-(1..999).each do |i|
-  if (i % 3 == 0) or (i % 5 == 0)
-    total_sum += i
-  end
-end
+# this goes from 0 to 999
+1000.times { |i| total_sum += i if (i % 3).zero? or (i % 5).zero? }
 
 puts total_sum
