@@ -1,5 +1,7 @@
 =begin
+
 Find the greatest product of five consecutive digits in the 1000-digit number.
+
 =end
 
 num_str = File.open("eight.text", "r").read.delete("\n")
