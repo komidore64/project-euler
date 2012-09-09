@@ -22,3 +22,9 @@ largest = 0
 end
 
 puts largest
+
+# time ruby four.rb 
+# 
+# real  0m3.522s
+# user  0m3.455s
+# sys   0m0.013s

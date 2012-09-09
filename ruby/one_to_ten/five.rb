@@ -32,3 +32,9 @@ require 'rational'
 num = (1..20).inject(1) { |result, n| result.lcm n }
 
 =end
+
+# time ruby five.rb 
+# 
+# real  0m0.014s
+# user  0m0.006s
+# sys   0m0.006s

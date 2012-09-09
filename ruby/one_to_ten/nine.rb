@@ -21,3 +21,9 @@ Find the product abc.
     end
   end
 end
+
+# time ruby nine.rb 
+# 
+# real  6m46.012s
+# user  6m37.283s
+# sys   0m0.792s

@@ -20,3 +20,9 @@ Math.sqrt(bfn).floor.downto(1) do |n|
     exit
   end
 end
+
+# time ruby three.rb 
+# 
+# real  0m0.695s
+# user  0m0.683s
+# sys   0m0.007s

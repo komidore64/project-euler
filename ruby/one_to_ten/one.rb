@@ -13,3 +13,9 @@ total_sum = 0
 1000.times { |i| total_sum += i if (i % 3).zero? or (i % 5).zero? }
 
 puts total_sum
+
+# time ruby one.rb 
+# 
+# real  0m0.014s
+# user  0m0.008s
+# sys   0m0.005s

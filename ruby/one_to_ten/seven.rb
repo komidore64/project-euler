@@ -13,3 +13,9 @@ num = nil
 10001.times { num = primes.next }
 
 puts num
+
+# time ruby seven.rb 
+# 
+# real  2m12.551s
+# user  2m11.069s
+# sys   0m0.220s

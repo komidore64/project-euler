@@ -23,3 +23,9 @@ sum_squares = (1..100).collect { |n| n ** 2 }.inject { |sum, n| sum + n }
 square_sums = (1..100).inject { |sum, n| sum + n } ** 2
 
 puts square_sums - sum_squares
+
+# time ruby six.rb 
+# 
+# real  0m0.015s
+# user  0m0.007s
+# sys   0m0.005s
