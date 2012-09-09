@@ -64,3 +64,9 @@ end
 end
 
 puts greatest_product
+
+# time ruby eleven.rb
+#
+# real  0m0.025s
+# user  0m0.016s
+# sys   0m0.006s

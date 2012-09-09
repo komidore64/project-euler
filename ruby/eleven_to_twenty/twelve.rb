@@ -71,3 +71,9 @@ begin
 end while (count < 500)
 
 puts tri_num
+
+# time ruby twelve.rb
+#
+# real  3m27.343s
+# user  3m23.031s
+# sys   0m0.489s

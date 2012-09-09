@@ -23,4 +23,8 @@ end
 
 puts total_sum
 
-# this is a little slow. takes roughly 3.25 minutes
+# time ruby ten.rb
+#
+# real  3m2.272s
+# user  2m53.591s
+# sys   0m0.421s
