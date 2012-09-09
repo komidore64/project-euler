@@ -23,7 +23,7 @@ What is the value of the first triangle number to have over five hundred divisor
 =begin
 
 i did a little reading on factoring and counting factors
-http://www.mathgoodies.com/forums/topic.asp?TOPIC_ID=33559
+http://mathforum.org/library/drmath/view/57151.html
 
 =end
 
