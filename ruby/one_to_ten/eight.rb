@@ -1,8 +1,6 @@
-=begin
-
-Find the greatest product of five consecutive digits in the 1000-digit number.
-
-=end
+# 
+# Find the greatest product of five consecutive digits in the 1000-digit number.
+# 
 
 num_str = File.open("eight.text", "r").read.delete("\n")
 
