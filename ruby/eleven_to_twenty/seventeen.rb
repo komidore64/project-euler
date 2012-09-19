@@ -11,8 +11,28 @@
 # contains 20 letters. The use of "and" when writing out numbers is
 # in compliance with British usage.
 
-def get_ten_to_nineteen(num)
+def get_one_to_nineteen(num)
   case num
+  when 0
+    raise "shouldn't get 0"
+  when 1
+    return "one"
+  when 2
+    return "two"
+  when 3
+    return "three"
+  when 4
+    return "four"
+  when 5
+    return "five"
+  when 6
+    return "six"
+  when 7
+    return "seven"
+  when 8
+    return "eight"
+  when 9
+    return "nine"
   when 10
     return "ten"
   when 11
@@ -34,7 +54,7 @@ def get_ten_to_nineteen(num)
   when 19
     return "nineteen"
   else
-    raise "oh snap"
+    raise "shouldn't get 20"
   end
 end
 
@@ -61,7 +81,7 @@ def get_ones_digit(num)
   when 9
     return "nine"
   else
-    raise "oh noes"
+    raise "shouldn't get 10"
   end
 end
 
@@ -70,7 +90,7 @@ def get_tens_digit(num)
   when 0
     return ""
   when 1
-    raise "shouldn't hit 10"
+    raise "shouldn't get 1"
   when 2
     return "twenty"
   when 3
@@ -88,7 +108,7 @@ def get_tens_digit(num)
   when 9
     return "ninety"
   else
-    raise "something died"
+    raise "shouldn't get 10"
   end
 end
 
@@ -115,7 +135,7 @@ def get_hundred_digit(num)
   when 9
     return "nine hundred and"
   else
-    raise "shouldn't be here"
+    raise "shouldn't get 10"
   end
 end
 
@@ -126,20 +146,31 @@ def get_thousand_digit(num)
   when 1
     return "one thousand"
   else
-    raise "busted"
+    raise "should only get 1"
+  end
+end
+
+def get_ten_and_one_digit(str_num)
+  if str_num.to_i < 20
+    return get_one_to_nineteen(str_num.to_i)
+  else if str_num.to_i >= 20
+    words << get_tens_digit(str_num[0].to_i)
+    words << get_ones_digit(str_num[1].to_i)
+    return words
+  else
+    raise "shouldn't be here"
   end
 end
 
 
-total_words = ""
+@total_words = ""
 
 (1..100).each do |n|
   str = "%04d" % n
-  if n > 9 and n < 20
-    total_words << get_ten_to_nineteen(n)
-  else
-    total_words << get_thousand_digit(n[0]) + get_hundred_digit(n[1]) + get_tens_digit(n[2]) + get_ones_digit(n[3]) # fail
+    @total_words << get_thousand_digit(str[0].to_i)
+    @total_words << get_hundred_digit(str[1].to_i)
+    @total_words << get_ten_and_one_digit(str[2..3])
   end
 end
 
-puts total_words.delete(" ").length
+puts @total_words.delete(" ").length
