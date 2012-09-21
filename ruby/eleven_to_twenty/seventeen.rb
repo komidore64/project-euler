@@ -10,11 +10,13 @@
 # and forty-two) contains 23 letters and 115 (one hundred and fifteen)
 # contains 20 letters. The use of "and" when writing out numbers is
 # in compliance with British usage.
+#
 
-def get_one_to_nineteen(num)
+def get_one_to_nineteen(str_num)
+  num = str_num.to_i
   case num
   when 0
-    raise "shouldn't get 0"
+    return ""
   when 1
     return "one"
   when 2
@@ -54,11 +56,12 @@ def get_one_to_nineteen(num)
   when 19
     return "nineteen"
   else
-    raise "shouldn't get 20"
+    raise "error"
   end
 end
 
-def get_ones_digit(num)
+def get_ones_digit(str_num)
+  num = str_num.to_i
   case num
   when 0
     return ""
@@ -81,11 +84,12 @@ def get_ones_digit(num)
   when 9
     return "nine"
   else
-    raise "shouldn't get 10"
+    raise "error"
   end
 end
 
-def get_tens_digit(num)
+def get_tens_digit(str_num)
+  num = str_num.to_i
   case num
   when 0
     return ""
@@ -96,7 +100,7 @@ def get_tens_digit(num)
   when 3
     return "thirty"
   when 4
-    return "fourty"
+    return "forty"
   when 5
     return "fifty"
   when 6
@@ -108,69 +112,79 @@ def get_tens_digit(num)
   when 9
     return "ninety"
   else
-    raise "shouldn't get 10"
+    raise "error"
   end
 end
 
-def get_hundred_digit(num)
+def get_hundreds_digit(str_num)
+  num = str_num[0].chr.to_i
+  postfix = (str_num[1..2].to_i <= 0) ? "" : "and"
   case num
   when 0
     return ""
   when 1
-    return "one hundred and"
+    return "onehundred" + postfix
   when 2
-    return "two hundred and"
+    return "twohundred" + postfix
   when 3
-    return "three hundred and"
+    return "threehundred" + postfix
   when 4
-    return "four hundred and"
+    return "fourhundred" + postfix
   when 5
-    return "five hundred and"
+    return "fivehundred" + postfix
   when 6
-    return "six hundred and"
+    return "sixhundred" + postfix
   when 7
-    return "seven hundred and"
+    return "sevenhundred" + postfix
   when 8
-    return "eight hundred and"
+    return "eighthundred" + postfix
   when 9
-    return "nine hundred and"
+    return "ninehundred" + postfix
   else
-    raise "shouldn't get 10"
+    raise "error"
   end
 end
 
-def get_thousand_digit(num)
+def get_thousands_digit(str_num)
+  num = str_num.to_i
   case num
   when 0
     return ""
   when 1
-    return "one thousand"
+    return "onethousand"
   else
-    raise "should only get 1"
+    raise "error"
   end
 end
 
 def get_ten_and_one_digit(str_num)
   if str_num.to_i < 20
-    return get_one_to_nineteen(str_num.to_i)
-  else if str_num.to_i >= 20
-    words << get_tens_digit(str_num[0].to_i)
-    words << get_ones_digit(str_num[1].to_i)
+    return get_one_to_nineteen(str_num)
+  elsif str_num.to_i >= 20
+    words = ""
+    words << get_tens_digit(str_num[0].chr)
+    words << get_ones_digit(str_num[1].chr)
     return words
   else
-    raise "shouldn't be here"
+    raise "error"
   end
 end
-
 
 @total_words = ""
 
-(1..100).each do |n|
+(1..1000).each do |n|
   str = "%04d" % n
-    @total_words << get_thousand_digit(str[0].to_i)
-    @total_words << get_hundred_digit(str[1].to_i)
-    @total_words << get_ten_and_one_digit(str[2..3])
-  end
+  str_num = ""
+  str_num << get_thousands_digit(str[0].chr)
+  str_num << get_hundreds_digit(str[1..3])
+  str_num << get_ten_and_one_digit(str[2..3])
+  @total_words << str_num
 end
 
-puts @total_words.delete(" ").length
+puts @total_words.gsub(/\s+/, "").length
+
+# time ruby seventeen.rb
+#
+# real  0m0.027s
+# user  0m0.022s
+# sys   0m0.005s
