@@ -1,38 +1,24 @@
-# 
+#
 # 2520 is the smallest number that can be divided by each of
 # the numbers from 1 to 10 without any remainder.
-# 
+#
 # What is the smallest positive number that is evenly
 # divisible by all of the numbers from 1 to 20?
-# 
+#
 
 @divs = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 def is_twenty_div(num)
-  @divs.each do |d|
-    return false if (num % d).zero?
-  end
+  @divs.each { |d| return false if not (num % d).zero? }
   return true
 end
 
 num = 2
-while not is_twenty_div(num)
-  num += 2
-end
-
+num += 2 until is_twenty_div(num)
 puts num
 
-=begin
-
-this is is my favorite solution. too bad i didn't think of it.
-
-require 'rational'
-num = (1..20).inject(1) { |result, n| result.lcm n }
-
-=end
-
-# time ruby five.rb 
-# 
-# real  0m0.014s
-# user  0m0.006s
-# sys   0m0.006s
+# time ruby five.rb
+#
+# real  3m45.092s
+# user  2m29.474s
+# sys   1m15.237s

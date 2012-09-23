@@ -1,8 +1,8 @@
-# 
+#
 # The prime factors of 13195 are 5, 7, 13 and 29.
-# 
+#
 # What is the largest prime factor of the number 600851475143 ?
-# 
+#
 
 def is_prime?(num)
   return true if num == 2
@@ -19,8 +19,8 @@ Math.sqrt(bfn).floor.downto(1) do |n|
   end
 end
 
-# time ruby three.rb 
-# 
+# time ruby three.rb
+#
 # real  0m0.695s
 # user  0m0.683s
 # sys   0m0.007s

@@ -1,6 +1,6 @@
-# 
+#
 # Find the greatest product of five consecutive digits in the 1000-digit number.
-# 
+#
 
 num_str = File.open("eight.text", "r").read.delete("\n")
 
@@ -18,8 +18,8 @@ end
 
 puts largest_product
 
-# time ruby eight.rb 
-# 
+# time ruby eight.rb
+#
 # real  0m0.026s
 # user  0m0.016s
 # sys   0m0.006s

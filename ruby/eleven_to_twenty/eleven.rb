@@ -1,11 +1,11 @@
-# 
+#
 # In the 20 x 20 grid, four numbers along a diagonal line have been marked in red.
-# 
+#
 # The product of these numbers is 26 * 63 * 78 * 14 = 1788696.
-# 
+#
 # What is the greatest product of four adjacent numbers
 # in any direction (up, down, left, right, or diagonally) in the 20 x 20 grid?
-# 
+#
 
 num_square = []
 
