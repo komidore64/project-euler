@@ -34,5 +34,36 @@
 # it cannot be solved by brute force, and requires a clever method! ;o)
 #
 
-# reads the file into an array with each row of the triangle being an inner-array
-triangle = File.new("eighteen.text", "r").readlines.collect! {|row| row.chomp! }.collect! {|row| row.split }
+# have we reached the bottom?
+def at_max_row?(tri, row, col)
+  row >= tri.size - 1
+end
+
+# have we reached the far right?
+def at_max_col?(tri, row, col)
+  col >= tri[tri.size - 1].size - 1
+end
+
+def greatest_of(*arr)
+  arr.max
+end
+
+def traverse(triangle, row = 0, col = 0)
+  if at_max_row?(triangle, row, col) || at_max_col?(triangle, row, col)
+   return triangle[row][col]
+  end
+
+  return triangle[row][col] +
+    greatest_of(traverse(triangle, row + 1, col), traverse(triangle, row + 1, col + 1))
+end
+
+# reads the file into an array with each row of the triangle being an inner-array of integers
+pyramid = File.open("eighteen.text", "r").readlines.collect { |row| row.chomp.split.collect { |elem| elem.to_i } }
+
+puts traverse(pyramid)
+
+# time ruby eighteen.rb
+#
+# real    0m0.029s
+# user    0m0.021s
+# sys     0m0.007s
