@@ -6,21 +6,10 @@
 #
 # Find the sum of the digits in the number 100!
 
-def fact(k)
-  return 1 if (k <= 1) # it's bad when you start seeing a backwards hash-rocket
-  return k * fact(k - 1)
-end
-
-sum = 0
-
-fact(100).to_s.each_char do |c|
-  sum += c.to_i
-end
-
-puts sum
+puts 100.downto(1).inject(:*).to_s.each_char.inject(0) { |sum, c| sum += c.to_i }
 
 # time ruby twenty.rb
 #
-# real    0m0.015s
-# user    0m0.012s
+# real    0m0.012s
+# user    0m0.010s
 # sys     0m0.002s
