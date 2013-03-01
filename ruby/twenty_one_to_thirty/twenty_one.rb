@@ -26,7 +26,7 @@ end
 # so the 'puts' command in this case receives the do/end block.
 # that causes inject to act unexpectedly because it is not receiving
 # the do/end block, and acts differently.
-puts 2.upto(9999).inject([]) { |arr, n|
+result = 2.upto(9999).inject([]) do |arr, n|
   d1 = d_sum(n)
   d2 = d_sum(d1)
   if n == d2 && d1 != d2
@@ -34,7 +34,9 @@ puts 2.upto(9999).inject([]) { |arr, n|
     arr << d1
   end
   arr
-}.uniq.inject(:+)
+end
+
+puts result.uniq.inject(:+)
 
 # side note: i first wrote this without inject (using an external variable),
 # and that was faster.
