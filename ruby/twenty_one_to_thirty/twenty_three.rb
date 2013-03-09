@@ -18,9 +18,6 @@
 # of two abundant numbers.
 #
 
-require 'rubygems'
-require 'debugger'
-
 def proper_divisors(num)
   factors = []
   1.upto((num / 2).ceil).each do |n|
