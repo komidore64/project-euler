@@ -16,17 +16,14 @@
 
 require 'date'
 
-d = Date.new(1901, 1, 1)
-sundays = 0
+p (Date.new(1901, 1, 1)..Date.new(2000, 12, 31)).inject(0) { |sun, d|
+  sun += 1 if d.sunday? && d.mday == 1
+  sun
+}
 
-while (d += 1) <= Date.new(2000, 12, 31) do
-  sundays += 1 if d.sunday? && d.mday == 1
-end
-
-puts sundays
 
 # time ruby nineteen.rb
 #
-# real    0m0.039s
-# user    0m0.031s
-# sys     0m0.008s
+# real    0m0.045s
+# user    0m0.038s
+# sys     0m0.006s
