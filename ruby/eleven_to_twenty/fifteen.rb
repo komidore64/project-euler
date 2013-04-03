@@ -20,3 +20,9 @@ def choose(n, k)
 end
 
 puts choose(40, 20)
+
+# time ruby fifteen.rb
+#
+# real    0m0.013s
+# user    0m0.008s
+# sys     0m0.004s
