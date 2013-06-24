@@ -10,12 +10,12 @@
 # 5, 6, 7, 8 and 9?
 #
 
-puts [0,1,2,3,4,5,6,7,8,9].permutation.to_a.collect! { |arr| arr.inject("") { |num, c| num << c.to_s }.to_i }[999999]
+puts [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].permutation.to_a[999999].inject("") { |num, c| num << c.to_s }
 
 # time ruby twenty_four.rb
 #
-# real    0m13.831s
-# user    0m13.582s
-# sys     0m0.202s
+# real    0m2.406s
+# user    0m2.208s
+# sys     0m0.177s
 #
 # It feels a little bit like cheating just using Array#permutation...
