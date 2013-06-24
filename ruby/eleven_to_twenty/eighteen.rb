@@ -64,6 +64,6 @@ puts traverse(pyramid)
 
 # time ruby eighteen.rb
 #
-# real    0m0.029s
-# user    0m0.021s
-# sys     0m0.007s
+# real    0m0.028s
+# user    0m0.023s
+# sys     0m0.005s

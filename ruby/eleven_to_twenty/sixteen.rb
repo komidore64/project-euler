@@ -8,6 +8,6 @@ puts (2 ** 1000).to_s.each_char.inject(0) { |sum, c| sum + c.to_i }
 
 # time ruby sixteen.rb
 #
-# real  0m0.014s
-# user  0m0.007s
-# sys   0m0.005s
+# real    0m0.013s
+# user    0m0.011s
+# sys     0m0.002s

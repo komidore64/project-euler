@@ -20,6 +20,6 @@ puts largest_product
 
 # time ruby eight.rb
 #
-# real  0m0.026s
-# user  0m0.016s
-# sys   0m0.006s
+# real    0m0.024s
+# user    0m0.015s
+# sys     0m0.008s

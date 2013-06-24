@@ -24,6 +24,6 @@ puts largest
 
 # time ruby four.rb
 #
-# real    0m0.486s
-# user    0m0.481s
-# sys     0m0.004s
+# real    0m0.479s
+# user    0m0.475s
+# sys     0m0.003s

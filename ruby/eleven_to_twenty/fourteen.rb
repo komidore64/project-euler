@@ -44,6 +44,6 @@ puts pair[:num]
 
 # time ruby fourteen.rb
 #
-# real  1m13.480s
-# user  1m12.930s
-# sys   0m0.440s
+# real    0m14.022s
+# user    0m14.000s
+# sys     0m0.002s

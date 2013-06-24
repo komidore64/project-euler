@@ -187,6 +187,6 @@ puts @total_words.gsub(/\s+/, "").length
 
 # time ruby seventeen.rb
 #
-# real  0m0.027s
-# user  0m0.022s
-# sys   0m0.005s
+# real    0m0.025s
+# user    0m0.019s
+# sys     0m0.006s

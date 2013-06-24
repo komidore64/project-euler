@@ -39,7 +39,7 @@ totals[totals.size - 1] = pyramid.last
 
 # here's where the magic happens
 #
-# we're building the totals from bottom to top, to avoid recursion.
+# we're building the totals from bottom to top, to avoid (slow) recursion.
 (pyramid.size - 2).downto(0) do |row|
   totals[row].each_index do |col|
     totals[row][col] = pyramid[row][col] +

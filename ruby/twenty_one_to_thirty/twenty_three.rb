@@ -69,5 +69,3 @@ puts non_abundant_sum
 # real    67m23.392s
 # user    67m16.093s
 # sys     0m0.451s
-#
-# gross! reeeeeeeaaaaaally slow

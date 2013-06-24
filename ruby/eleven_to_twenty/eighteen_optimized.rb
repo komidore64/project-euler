@@ -23,6 +23,6 @@ puts totals[0][0]
 
 # time ruby eighteen_optimized.rb
 #
-# real    0m0.015s
-# user    0m0.010s
-# sys     0m0.004s
+# real    0m0.014s
+# user    0m0.011s
+# sys     0m0.003s

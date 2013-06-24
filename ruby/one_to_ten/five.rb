@@ -19,6 +19,6 @@ puts num
 
 # time ruby five.rb
 #
-# real  3m45.092s
-# user  2m29.474s
-# sys   1m15.237s
+# real    0m33.729s
+# user    0m33.638s
+# sys     0m0.008s

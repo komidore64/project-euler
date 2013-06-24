@@ -22,6 +22,6 @@ end
 
 # time ruby nine.rb
 #
-# real  6m46.012s
-# user  6m37.283s
-# sys   0m0.792s
+# real    0m25.908s
+# user    0m25.860s
+# sys     0m0.003s

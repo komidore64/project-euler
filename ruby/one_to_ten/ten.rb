@@ -12,6 +12,6 @@ puts Prime.each(2000000).inject(:+)
 
 # time ruby ten.rb
 #
-# real    0m4.778s
-# user    0m4.757s
-# sys     0m0.004s
+# real    0m4.736s
+# user    0m4.713s
+# sys     0m0.005s
