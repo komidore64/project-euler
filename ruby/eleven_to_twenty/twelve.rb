@@ -27,20 +27,16 @@
 
 require 'mathn'
 
-def is_prime?(num)
-  return true if num == 2
-  (2..(Math.sqrt(num).ceil)).each { |i| return false if (num % i).zero? }
-  return true
-end
-
 def prime_factors(num)
-  return [num] if is_prime?(num)
-  primes = Prime.new
-  begin
-    div = primes.next
-    return ([div] << prime_factors(num / div)).flatten if (num % div).zero?
-  end while (div < num)
-  raise Exception
+  return [num] if num.prime?
+  ret = []
+  Prime.each(num) do |div|
+    if (num % div).zero?
+      ret = ([div] << prime_factors(num / div)).flatten
+      break
+    end
+  end
+  ret
 end
 
 def factor_count(num)
@@ -63,13 +59,12 @@ begin
   tri_num += n
   count = factor_count(tri_num)
   n += 1
-  # puts "%d: %d" % [tri_num, count]
 end while (count < 500)
 
 puts tri_num
 
 # time ruby twelve.rb
 #
-# real  3m27.343s
-# user  3m23.031s
-# sys   0m0.489s
+# real    0m3.498s
+# user    0m3.483s
+# sys     0m0.004s

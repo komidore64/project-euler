@@ -25,7 +25,7 @@
 prev_one = 1
 prev_two = 1
 
-hash = {:num => prev_one + prev_two, :term => 3}
+hash = { :num => prev_one + prev_two, :term => 3 }
 
 while (true)
   if (hash[:num].to_s.size >= 1000)

@@ -33,11 +33,11 @@ def count_sequence(num)
   return count
 end
 
-pair = {:count => 0, :num => 1}
+pair = { :count => 0, :num => 1 }
 
 (1..999999).each do |n|
   temp_count = count_sequence(n)
-  pair = {:count => temp_count, :num => n} if temp_count > pair[:count]
+  pair = { :count => temp_count, :num => n } if temp_count > pair[:count]
 end
 
 puts pair[:num]

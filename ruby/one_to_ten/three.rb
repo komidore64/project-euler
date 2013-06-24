@@ -4,16 +4,12 @@
 # What is the largest prime factor of the number 600851475143 ?
 #
 
-def is_prime?(num)
-  return true if num == 2
-  (2..(Math.sqrt(num).ceil)).each { |i| return false if (num % i).zero? }
-  return true
-end
+require 'mathn'
 
 bfn = 600851475143
 
 Math.sqrt(bfn).floor.downto(1) do |n|
-  if (bfn % n).zero? and is_prime?(n)
+  if (bfn % n).zero? and n.prime?
     puts n
     exit
   end

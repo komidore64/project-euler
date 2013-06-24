@@ -6,16 +6,17 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 #
 
-def is_palindrome?(num)
-  return true if num.to_s == num.to_s.reverse
-  return false
+class Fixnum
+  def palindrome?
+    self.to_s == self.to_s.reverse
+  end
 end
 
 largest = 0
 
 (100..999).each do |i|
   (100..999).each do |j|
-    largest = i * j if is_palindrome?(i * j) and (i * j) > largest
+    largest = i * j if (i * j).palindrome? and (i * j) > largest
   end
 end
 
@@ -23,6 +24,6 @@ puts largest
 
 # time ruby four.rb
 #
-# real  0m3.522s
-# user  0m3.455s
-# sys   0m0.013s
+# real    0m0.486s
+# user    0m0.481s
+# sys     0m0.004s

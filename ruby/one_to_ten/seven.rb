@@ -6,15 +6,12 @@
 #
 
 require 'mathn'
-primes = Prime.new
-num = nil
 
-10001.times { num = primes.next }
-
-puts num
+# new Prime class in 1.9.3
+puts Prime.first(10001).last
 
 # time ruby seven.rb
 #
-# real  2m12.551s
-# user  2m11.069s
-# sys   0m0.220s
+# real    0m0.143s
+# user    0m0.138s
+# sys     0m0.003s

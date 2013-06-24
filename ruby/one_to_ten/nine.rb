@@ -12,7 +12,7 @@
 (1..1000).each do |a|
   (1..1000).each do |b|
     (1..1000).each do |c|
-      if (a * a) + (b * b) == (c * c) and a + b + c == 1000
+      if ((a * a) + (b * b) == (c * c)) && (a + b + c == 1000)
         puts (a * b * c)
         exit
       end
