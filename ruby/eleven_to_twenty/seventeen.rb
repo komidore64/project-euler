@@ -12,6 +12,8 @@
 # in compliance with British usage.
 #
 
+# i don't like how huge this program is, but i wasn't sure how to shrink it
+
 def get_one_to_nineteen(str_num)
   num = str_num.to_i
   case num

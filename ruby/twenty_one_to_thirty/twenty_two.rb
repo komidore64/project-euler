@@ -1,3 +1,4 @@
+#
 # Using names.txt (right click and 'Save Link/Target As...'), a 46K text file
 # containing over five-thousand first names, begin by sorting it into
 # alphabetical order. Then working out the alphabetical value for each name,
@@ -9,6 +10,7 @@
 # COLIN would obtain a score of 938 * 53 = 49714.
 #
 # What is the total of all the name scores in the file?
+#
 
 def name_score(name)
   name.each_char.inject(0) { |sum, c| sum += (c.ord - 96) }

@@ -1,3 +1,5 @@
+# buckle up
+
 pyramid = File.open("eighteen.text", "r").readlines.collect { |row| row.chomp.split.collect { |elem| elem.to_i } }
 
 # setup the totals
