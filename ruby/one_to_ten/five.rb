@@ -6,19 +6,21 @@
 # divisible by all of the numbers from 1 to 20?
 #
 
-@divs = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-
-def is_twenty_div(num)
-  @divs.each { |d| return false if not (num % d).zero? }
-  return true
+class Fixnum
+  def twenty_div?
+    [11, 12, 13, 14, 15, 16, 17, 18, 19, 20].each do |d|
+      return false if !(self % d).zero?
+    end
+    true
+  end
 end
 
-num = 2
-num += 2 until is_twenty_div(num)
+num = 20
+num += 20 until num.twenty_div?
 puts num
 
 # time ruby five.rb
 #
-# real    0m33.729s
-# user    0m33.638s
-# sys     0m0.008s
+# real    0m4.636s
+# user    0m4.616s
+# sys     0m0.003s
