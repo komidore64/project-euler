@@ -5,7 +5,7 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 #
 
-puts (1..999).inject(0) { |accum, val| accum += val if (val % 3).zero? || (val % 5).zero?; accum }
+puts (1..999).select { |val| (val % 3).zero? || (val % 5).zero? }.reduce(0, &:+)
 
 # time ruby one.rb
 #
