@@ -9,7 +9,7 @@ require 'mathn'
 bfn = 600851475143
 
 Math.sqrt(bfn).floor.downto(1) do |n|
-  if (bfn % n).zero? and n.prime?
+  if (bfn % n).zero? && n.prime?
     puts n
     exit
   end
