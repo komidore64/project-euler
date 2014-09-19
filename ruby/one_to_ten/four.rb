@@ -16,7 +16,7 @@ largest = 0
 
 (100..999).each do |i|
   (100..999).each do |j|
-    largest = i * j if (i * j).palindrome? and (i * j) > largest
+    largest = i * j if (i * j).palindrome? && (i * j) > largest
   end
 end
 
