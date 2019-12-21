@@ -22,9 +22,3 @@ while (fib < 4000000)
 end
 
 puts total_sum
-
-# time ruby two.rb
-#
-# real    0m0.012s
-# user    0m0.009s
-# sys     0m0.003s
