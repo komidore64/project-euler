@@ -6,9 +6,3 @@
 #
 
 puts (1..999).select { |val| (val % 3).zero? || (val % 5).zero? }.reduce(0, &:+)
-
-# time ruby one.rb
-#
-# real    0m0.017s
-# user    0m0.012s
-# sys     0m0.005s
