@@ -6,12 +6,4 @@
 
 require 'mathn'
 
-# new Prime class for 1.9.3
 puts Prime.each(2000000).inject(:+)
-
-
-# time ruby ten.rb
-#
-# real    0m4.736s
-# user    0m4.713s
-# sys     0m0.005s
