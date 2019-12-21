@@ -18,9 +18,3 @@ end
 num = 20
 num += 20 until num.twenty_div?
 puts num
-
-# time ruby five.rb
-#
-# real    0m4.636s
-# user    0m4.616s
-# sys     0m0.003s
