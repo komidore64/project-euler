@@ -19,9 +19,3 @@
     end
   end
 end
-
-# time ruby nine.rb
-#
-# real    0m25.908s
-# user    0m25.860s
-# sys     0m0.003s
