@@ -115,4 +115,10 @@ class ProjectEuler < MiniTest::Test
     result = %x{ruby p0022.rb}
     assert_equal result.strip.to_i, 871198282
   end
+
+  def test_0023
+    skip "this one takes over an hour :("
+    result = %x{ruby p0023.rb}
+    assert_equal result.strip.to_i, 4179871
+  end
 end
