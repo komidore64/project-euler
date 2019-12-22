@@ -42,10 +42,4 @@ puts result.uniq.inject(:+)
 # side note: i first wrote this without inject (using an external variable),
 # and that was faster.
 #
-# the moral of the story is: outside accumulator-variables are not bad.
-
-# time ruby twenty_one.rb
-#
-# real    0m3.945s
-# user    0m3.938s
-# sys     0m0.002s
+# the moral of the story is: outside accumulator-variables are not necessarily bad.
