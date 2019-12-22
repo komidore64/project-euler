@@ -24,7 +24,7 @@ def greatest_of(*arr)
 end
 
 # load the numbers triangle
-pyramid = File.open("sixty_seven.text", "r").readlines.collect do |row|
+pyramid = File.open("p0067.input", "r").readlines.collect do |row|
   row.chomp.split.collect do |elem|
     elem.to_i
   end
@@ -49,9 +49,3 @@ end
 
 # boom
 puts totals[0][0]
-
-# time ruby sixty_seven.rb
-#
-# real    0m0.018s
-# user    0m0.014s
-# sys     0m0.003s
