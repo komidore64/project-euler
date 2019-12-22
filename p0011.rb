@@ -9,7 +9,7 @@
 
 num_square = []
 
-File.open("eleven.text", "r") do |file|
+File.open("p0011.input", "r") do |file|
   while (line = file.gets)
     num_square << line.split
   end
@@ -62,9 +62,3 @@ end
 end
 
 puts greatest_product
-
-# time ruby eleven.rb
-#
-# real    0m0.015s
-# user    0m0.013s
-# sys     0m0.001s
