@@ -131,4 +131,10 @@ class ProjectEuler < MiniTest::Test
     result = %x{ruby p0025.rb}
     assert_equal result.strip.to_i, 4782
   end
+
+  def test_0026
+    skip "yet to be solved"
+    # result = %x{ruby p0026.rb}
+    # assert_equal result.strip.to_i, ???
+  end
 end
