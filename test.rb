@@ -85,4 +85,14 @@ class ProjectEuler < MiniTest::Test
     result = %x{ruby p0017.rb}
     assert_equal result.strip.to_i, 21124
   end
+
+  def test_0018
+    result = %x{ruby p0018.rb}
+    assert_equal result.strip.to_i, 1074
+  end
+
+  def test_0018_optimized
+    result = %x{ruby p0018_optimized.rb}
+    assert_equal result.strip.to_i, 1074
+  end
 end
